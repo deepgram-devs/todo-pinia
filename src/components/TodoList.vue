@@ -8,10 +8,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import { useTodoListStore } from "../store/useTodoListStore";
 import { storeToRefs } from "pinia";
-export default {
+export default defineComponent({
   setup() {
     const store = useTodoListStore();
 
@@ -20,7 +21,7 @@ export default {
 
     return { todoList, toggleCompleted, deleteTodo };
   },
-};
+});
 </script>
 
 <style>

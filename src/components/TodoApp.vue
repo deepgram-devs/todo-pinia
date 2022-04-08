@@ -3,15 +3,14 @@
   <todo-list />
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import TodoForm from "./TodoForm.vue";
 import TodoList from "./TodoList.vue";
-export default {
+export default defineComponent({
   components: { TodoForm, TodoList },
   setup() {
     return {};
   },
-};
+});
 </script>
-
-<style scoped></style>
