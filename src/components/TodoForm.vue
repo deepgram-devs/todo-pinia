@@ -4,15 +4,15 @@
   </form>
 </template>
 
-<script>
-import { ref } from "vue";
+<script lang="ts">
+import { ref, defineComponent } from "vue";
 import { useTodoListStore } from "../store/useTodoListStore";
-export default {
+export default defineComponent({
   setup() {
     const todo = ref("");
     const store = useTodoListStore();
 
-    function addItemAndClear(item) {
+    function addItemAndClear(item: string) {
       if (item.length === 0) {
         return;
       }
@@ -22,7 +22,7 @@ export default {
 
     return { todo, addItemAndClear };
   },
-};
+});
 </script>
 
 <style lang="scss" scoped></style>

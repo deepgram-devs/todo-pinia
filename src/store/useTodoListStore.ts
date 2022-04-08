@@ -1,21 +1,27 @@
 import { defineStore } from "pinia";
 
+interface ToDoItem {
+  item: string;
+  id: number;
+  completed: boolean;
+}
+
 export const useTodoListStore = defineStore("todoList", {
   state: () => ({
-    todoList: [],
+    todoList: [] as ToDoItem[],
     id: 0,
     showAlert: false,
   }),
   actions: {
-    addTodo(item) {
+    addTodo(item: string) {
       this.todoList.push({ item, id: this.id++, completed: false });
     },
-    deleteTodo(itemID) {
+    deleteTodo(itemID: number) {
       this.todoList = this.todoList.filter((object) => {
         return object.id !== itemID;
       });
     },
-    toggleCompleted(idToFind) {
+    toggleCompleted(idToFind: number) {
       const todo = this.todoList.find((obj) => obj.id === idToFind);
       if (todo) {
         todo.completed = !todo.completed;

@@ -2,15 +2,16 @@
   <todo-app />
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import TodoApp from "./components/TodoApp.vue";
 
-export default {
+export default defineComponent({
   name: "App",
   components: {
     TodoApp,
   },
-};
+});
 </script>
 
 <style>
