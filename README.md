@@ -7,13 +7,3 @@ Read the tutorial at [Deepgram Docs](https://developers.deepgram.com/blog/2022/0
 Checkout the [Pinia docs](https://pinia.vuejs.org/)
 
 <img src="./src/assets/todo-list-example.png" alt="Screenshot of the to-do list app" style="width:50%"/>
-
-## Project setup
-
-First, clone the project. Then install the dependencies with `npm install`
-
-### Run the development server
-
-```
-npm run serve
-```
